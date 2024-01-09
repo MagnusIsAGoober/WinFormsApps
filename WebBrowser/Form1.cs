@@ -20,17 +20,6 @@ namespace WebBrowser
 
             wvMain.CoreWebView2.Navigate(tbUrl.Text);
         }
-
-        private void btnPrevious_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnPrint_Click(object sender, EventArgs e)
         {
             wvMain.CoreWebView2.ShowPrintUI();
@@ -41,14 +30,14 @@ namespace WebBrowser
             wvMain.CoreWebView2.GoBack();
         }
 
-        private void btnNext_Click_1(object sender, EventArgs e)
-        {
-            wvMain.CoreWebView2.GoForward();
-        }
-
         private void btnHome_Click(object sender, EventArgs e)
         {
             wvMain.CoreWebView2.Navigate("https://www.google.ca/?safe=active&ssui=on");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            wvMain.CoreWebView2.GoForward();
         }
     }
 }
