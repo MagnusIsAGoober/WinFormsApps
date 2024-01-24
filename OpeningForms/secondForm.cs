@@ -29,14 +29,11 @@ namespace OpeningForms
 
             firstForm second = new firstForm(text);
 
+            this.Visible = false;
 
             second.ShowDialog();
 
-            for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
-            {
-                if (Application.OpenForms[i].Name != "secondForm")
-                    Application.OpenForms[i].Close();
-            }
+            
         }
     }
 }

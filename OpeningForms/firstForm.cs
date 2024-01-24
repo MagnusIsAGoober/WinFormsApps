@@ -16,7 +16,7 @@ namespace OpeningForms
 
             secondForm second = new secondForm(text);
 
-            
+            this.Visible = false;
 
             second.ShowDialog();
 
