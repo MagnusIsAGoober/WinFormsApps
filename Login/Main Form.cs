@@ -1,28 +1,22 @@
-//using MySql.Data.MySqlClient;
-//using System.Data;
-//using System.Data.OleDb;
+﻿
+
 using System.Data;
 using System.Data.OleDb;
-using System.Windows.Forms;
 
-namespace MsAccessDatabase
+namespace Login
 {
-    public partial class Form1 : Form
+
+    public partial class Main_Form : Form
     {
 
         OleDbConnection conn =
-            new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\2013.102253\Documents\Student_Scores.accdb");
+            new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\2013.102253\Documents\Pharmacy_Records.accdb");
 
         OleDbCommand cmd =
             new OleDbCommand();
-        public Form1()
+        public Main_Form()
         {
             InitializeComponent();
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
         }
 
         void refillGrid()
@@ -33,17 +27,16 @@ namespace MsAccessDatabase
             dt.Load(reader);
             dataGridView1.DataSource = dt;
         }
-
-        private void Form1_Load(object sender, EventArgs e)
+        private void Main_Form_Load(object sender, EventArgs e)
         {
             conn.Open(); // opens a connection to the ms access file
             cmd.Connection = conn; // tells the cmd command to work in this connection
             refillGrid();
         }
 
-        private void materialFloatingActionButton1_Click(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(materialTextBox3.Text);
+            int id = Convert.ToInt32(tbSearchLastName.Text);
             cmd.CommandText = "delete from Scores where ID =" + id + "";
             cmd.ExecuteNonQuery();
             refillGrid();
@@ -60,6 +53,11 @@ namespace MsAccessDatabase
 
             dataAdapter.Update(updatedDataTable);
             refillGrid();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -37,7 +37,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leaders of Rome", "Leaders 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProgressIndicator", "ProgressIndicator\ProgressIndicator.csproj", "{17FFF330-0404-4EA9-9F16-B4B8B8241CAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsAccessDatabase", "MsAccessDatabase\MsAccessDatabase.csproj", "{1183BCF0-70B0-496D-B2B3-82BF0DF2CA95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MsAccessDatabase", "MsAccessDatabase\MsAccessDatabase.csproj", "{1183BCF0-70B0-496D-B2B3-82BF0DF2CA95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "Login\Login.csproj", "{5B02BEAC-17BA-418D-B479-25C9FD40AAAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{1183BCF0-70B0-496D-B2B3-82BF0DF2CA95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1183BCF0-70B0-496D-B2B3-82BF0DF2CA95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1183BCF0-70B0-496D-B2B3-82BF0DF2CA95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B02BEAC-17BA-418D-B479-25C9FD40AAAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B02BEAC-17BA-418D-B479-25C9FD40AAAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B02BEAC-17BA-418D-B479-25C9FD40AAAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B02BEAC-17BA-418D-B479-25C9FD40AAAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
