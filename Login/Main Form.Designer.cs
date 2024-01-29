@@ -70,6 +70,7 @@
             materialFloatingActionButton2.TabIndex = 6;
             materialFloatingActionButton2.Text = "materialFloatingActionButton2";
             materialFloatingActionButton2.UseVisualStyleBackColor = true;
+            materialFloatingActionButton2.Click += materialFloatingActionButton2_Click;
             // 
             // tbPrescriptionComments
             // 
@@ -268,6 +269,7 @@
             Controls.Add(groupBox1);
             Name = "Main_Form";
             Text = "Main_Form";
+            FormClosing += Main_Form_FormClosing;
             Load += Main_Form_Load;
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

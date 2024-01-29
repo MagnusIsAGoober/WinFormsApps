@@ -9,8 +9,9 @@ namespace Login
     public partial class Main_Form : Form
     {
 
+
         OleDbConnection conn =
-           new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + (Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Pharmacy_Records.accdb"));
+           new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\2013.102253\Documents\Pharmacy_Records.accdb");
 
         OleDbCommand cmd =
             new OleDbCommand();
@@ -21,7 +22,7 @@ namespace Login
 
         void refillGrid()
         {
-            cmd.CommandText = "select * from Scores";
+            cmd.CommandText = "select * from Main";
             OleDbDataReader reader = cmd.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Load(reader);
@@ -37,7 +38,7 @@ namespace Login
         private void btnDelete_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(tbSearchLastName.Text);
-            cmd.CommandText = "delete from Scores where ID =" + id + "";
+            cmd.CommandText = "delete from Main where ID =" + id + "";
             cmd.ExecuteNonQuery();
             refillGrid();
         }
@@ -45,7 +46,7 @@ namespace Login
         private void materialButton1_Click(object sender, EventArgs e)
         {
             OleDbDataAdapter dataAdapter =
-                new OleDbDataAdapter("select * from Scores", conn);
+                new OleDbDataAdapter("select * from Main", conn);
             DataTable updatedDataTable = (DataTable)dataGridView1.DataSource;
 
             OleDbCommandBuilder commandBuilder =
@@ -58,6 +59,43 @@ namespace Login
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void materialFloatingActionButton2_Click(object sender, EventArgs e)
+        {
+
+            OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\2013.102253\Documents\Pharmacy_Records.accdb"); //Checks for final.accdb on every system.
+
+
+            OleDbCommand cmd = new OleDbCommand();
+
+            DataTable tab = (DataTable)dataGridView1.DataSource;
+
+            DataRow row = tab.NewRow();
+
+            int id = tab.Rows.Count + 1;
+            string ln = tbLastName.Text;
+            string fn = tbFirstName.Text;
+            string num = tbPhone.Text;
+            string res = tbaDDRESS.Text;
+            string per = tbPrescriptionComments.Text;
+
+            row[0] = id;
+            row[1] = ln;
+            row[2] = fn;
+            row[3] = num;
+            row[4] = res;
+            row[5] = per;
+
+            tab.Rows.Add(row);
+            refillGrid();
+
+
+        }
+
+        private void Main_Form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -18,5 +18,10 @@ namespace Login
             main.ShowDialog();
 
         }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

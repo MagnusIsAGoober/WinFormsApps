@@ -118,6 +118,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "Login";
+            FormClosing += Form1_FormClosing;
             ResumeLayout(false);
         }
 
