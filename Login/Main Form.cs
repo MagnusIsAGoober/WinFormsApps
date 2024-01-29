@@ -10,7 +10,7 @@ namespace Login
     {
 
         OleDbConnection conn =
-            new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\2013.102253\Documents\Pharmacy_Records.accdb");
+           new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + (Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\Pharmacy_Records.accdb"));
 
         OleDbCommand cmd =
             new OleDbCommand();
