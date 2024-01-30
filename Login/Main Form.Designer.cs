@@ -31,7 +31,7 @@
             groupBox1 = new GroupBox();
             materialFloatingActionButton2 = new MaterialSkin.Controls.MaterialFloatingActionButton();
             tbPrescriptionComments = new MaterialSkin.Controls.MaterialTextBox();
-            tbaDDRESS = new MaterialSkin.Controls.MaterialTextBox();
+            tbAddress = new MaterialSkin.Controls.MaterialTextBox();
             tbPhone = new MaterialSkin.Controls.MaterialTextBox();
             tbLastName = new MaterialSkin.Controls.MaterialTextBox();
             tbFirstName = new MaterialSkin.Controls.MaterialTextBox();
@@ -48,7 +48,7 @@
             // 
             groupBox1.Controls.Add(materialFloatingActionButton2);
             groupBox1.Controls.Add(tbPrescriptionComments);
-            groupBox1.Controls.Add(tbaDDRESS);
+            groupBox1.Controls.Add(tbAddress);
             groupBox1.Controls.Add(tbPhone);
             groupBox1.Controls.Add(tbLastName);
             groupBox1.Controls.Add(tbFirstName);
@@ -91,23 +91,23 @@
             tbPrescriptionComments.Text = "";
             tbPrescriptionComments.TrailingIcon = null;
             // 
-            // tbaDDRESS
+            // tbAddress
             // 
-            tbaDDRESS.AnimateReadOnly = false;
-            tbaDDRESS.BorderStyle = BorderStyle.None;
-            tbaDDRESS.Depth = 0;
-            tbaDDRESS.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            tbaDDRESS.Hint = "Address";
-            tbaDDRESS.LeadingIcon = null;
-            tbaDDRESS.Location = new Point(6, 134);
-            tbaDDRESS.MaxLength = 50;
-            tbaDDRESS.MouseState = MaterialSkin.MouseState.OUT;
-            tbaDDRESS.Multiline = false;
-            tbaDDRESS.Name = "tbaDDRESS";
-            tbaDDRESS.Size = new Size(404, 50);
-            tbaDDRESS.TabIndex = 3;
-            tbaDDRESS.Text = "";
-            tbaDDRESS.TrailingIcon = null;
+            tbAddress.AnimateReadOnly = false;
+            tbAddress.BorderStyle = BorderStyle.None;
+            tbAddress.Depth = 0;
+            tbAddress.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            tbAddress.Hint = "Address";
+            tbAddress.LeadingIcon = null;
+            tbAddress.Location = new Point(6, 134);
+            tbAddress.MaxLength = 50;
+            tbAddress.MouseState = MaterialSkin.MouseState.OUT;
+            tbAddress.Multiline = false;
+            tbAddress.Name = "tbAddress";
+            tbAddress.Size = new Size(404, 50);
+            tbAddress.TabIndex = 3;
+            tbAddress.Text = "";
+            tbAddress.TrailingIcon = null;
             // 
             // tbPhone
             // 
@@ -282,7 +282,7 @@
         private MaterialSkin.Controls.MaterialTextBox tbLastName;
         private MaterialSkin.Controls.MaterialTextBox tbFirstName;
         private MaterialSkin.Controls.MaterialTextBox tbPrescriptionComments;
-        private MaterialSkin.Controls.MaterialTextBox tbaDDRESS;
+        private MaterialSkin.Controls.MaterialTextBox tbAddress;
         private MaterialSkin.Controls.MaterialTextBox tbPhone;
         private MaterialSkin.Controls.MaterialTextBox2 tbSearchLastName;
         private DataGridView dataGridView1;

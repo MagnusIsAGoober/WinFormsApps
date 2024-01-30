@@ -29,33 +29,33 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            materialComboBox1 = new MaterialSkin.Controls.MaterialComboBox();
+            cbUsername = new MaterialSkin.Controls.MaterialComboBox();
             materialButton1 = new MaterialSkin.Controls.MaterialButton();
-            materialTextBox21 = new MaterialSkin.Controls.MaterialTextBox2();
+            tbPassword = new MaterialSkin.Controls.MaterialTextBox2();
             SuspendLayout();
             // 
-            // materialComboBox1
+            // cbUsername
             // 
-            materialComboBox1.AutoResize = false;
-            materialComboBox1.BackColor = Color.FromArgb(255, 255, 255);
-            materialComboBox1.Depth = 0;
-            materialComboBox1.DrawMode = DrawMode.OwnerDrawVariable;
-            materialComboBox1.DropDownHeight = 174;
-            materialComboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            materialComboBox1.DropDownWidth = 121;
-            materialComboBox1.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            materialComboBox1.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            materialComboBox1.FormattingEnabled = true;
-            materialComboBox1.Hint = "Username";
-            materialComboBox1.IntegralHeight = false;
-            materialComboBox1.ItemHeight = 43;
-            materialComboBox1.Location = new Point(49, 12);
-            materialComboBox1.MaxDropDownItems = 4;
-            materialComboBox1.MouseState = MaterialSkin.MouseState.OUT;
-            materialComboBox1.Name = "materialComboBox1";
-            materialComboBox1.Size = new Size(246, 49);
-            materialComboBox1.StartIndex = 0;
-            materialComboBox1.TabIndex = 0;
+            cbUsername.AutoResize = false;
+            cbUsername.BackColor = Color.FromArgb(255, 255, 255);
+            cbUsername.Depth = 0;
+            cbUsername.DrawMode = DrawMode.OwnerDrawVariable;
+            cbUsername.DropDownHeight = 174;
+            cbUsername.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbUsername.DropDownWidth = 121;
+            cbUsername.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            cbUsername.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            cbUsername.FormattingEnabled = true;
+            cbUsername.Hint = "Username";
+            cbUsername.IntegralHeight = false;
+            cbUsername.ItemHeight = 43;
+            cbUsername.Location = new Point(49, 12);
+            cbUsername.MaxDropDownItems = 4;
+            cbUsername.MouseState = MaterialSkin.MouseState.OUT;
+            cbUsername.Name = "cbUsername";
+            cbUsername.Size = new Size(246, 49);
+            cbUsername.StartIndex = 0;
+            cbUsername.TabIndex = 0;
             // 
             // materialButton1
             // 
@@ -78,54 +78,55 @@
             materialButton1.UseVisualStyleBackColor = true;
             materialButton1.Click += materialButton1_Click;
             // 
-            // materialTextBox21
+            // tbPassword
             // 
-            materialTextBox21.AnimateReadOnly = false;
-            materialTextBox21.BackgroundImageLayout = ImageLayout.None;
-            materialTextBox21.CharacterCasing = CharacterCasing.Normal;
-            materialTextBox21.Depth = 0;
-            materialTextBox21.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            materialTextBox21.HideSelection = true;
-            materialTextBox21.Hint = "Password";
-            materialTextBox21.LeadingIcon = null;
-            materialTextBox21.Location = new Point(49, 78);
-            materialTextBox21.MaxLength = 32767;
-            materialTextBox21.MouseState = MaterialSkin.MouseState.OUT;
-            materialTextBox21.Name = "materialTextBox21";
-            materialTextBox21.PasswordChar = '\0';
-            materialTextBox21.PrefixSuffixText = null;
-            materialTextBox21.ReadOnly = false;
-            materialTextBox21.RightToLeft = RightToLeft.No;
-            materialTextBox21.SelectedText = "";
-            materialTextBox21.SelectionLength = 0;
-            materialTextBox21.SelectionStart = 0;
-            materialTextBox21.ShortcutsEnabled = true;
-            materialTextBox21.Size = new Size(246, 48);
-            materialTextBox21.TabIndex = 3;
-            materialTextBox21.TabStop = false;
-            materialTextBox21.TextAlign = HorizontalAlignment.Left;
-            materialTextBox21.TrailingIcon = Properties.Resources._lock;
-            materialTextBox21.UseSystemPasswordChar = false;
+            tbPassword.AnimateReadOnly = false;
+            tbPassword.BackgroundImageLayout = ImageLayout.None;
+            tbPassword.CharacterCasing = CharacterCasing.Normal;
+            tbPassword.Depth = 0;
+            tbPassword.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            tbPassword.HideSelection = true;
+            tbPassword.Hint = "Password";
+            tbPassword.LeadingIcon = null;
+            tbPassword.Location = new Point(49, 78);
+            tbPassword.MaxLength = 32767;
+            tbPassword.MouseState = MaterialSkin.MouseState.OUT;
+            tbPassword.Name = "tbPassword";
+            tbPassword.PasswordChar = '●';
+            tbPassword.PrefixSuffixText = null;
+            tbPassword.ReadOnly = false;
+            tbPassword.RightToLeft = RightToLeft.No;
+            tbPassword.SelectedText = "";
+            tbPassword.SelectionLength = 0;
+            tbPassword.SelectionStart = 0;
+            tbPassword.ShortcutsEnabled = true;
+            tbPassword.Size = new Size(246, 48);
+            tbPassword.TabIndex = 3;
+            tbPassword.TabStop = false;
+            tbPassword.TextAlign = HorizontalAlignment.Left;
+            tbPassword.TrailingIcon = Properties.Resources._lock;
+            tbPassword.UseSystemPasswordChar = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(355, 195);
-            Controls.Add(materialTextBox21);
+            Controls.Add(tbPassword);
             Controls.Add(materialButton1);
-            Controls.Add(materialComboBox1);
+            Controls.Add(cbUsername);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "Login";
             FormClosing += Form1_FormClosing;
+            Load += Form1_Load;
             ResumeLayout(false);
         }
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialComboBox materialComboBox1;
+        private MaterialSkin.Controls.MaterialComboBox cbUsername;
         private MaterialSkin.Controls.MaterialButton materialButton1;
-        private MaterialSkin.Controls.MaterialTextBox2 materialTextBox21;
+        private MaterialSkin.Controls.MaterialTextBox2 tbPassword;
     }
 }

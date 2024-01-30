@@ -2,6 +2,7 @@
 
 using System.Data;
 using System.Data.OleDb;
+using System.Drawing;
 
 namespace Login
 {
@@ -67,30 +68,37 @@ namespace Login
             OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\2013.102253\Documents\Pharmacy_Records.accdb"); //Checks for final.accdb on every system.
 
 
-            OleDbCommand cmd = new OleDbCommand();
-
-            DataTable tab = (DataTable)dataGridView1.DataSource;
-
-            DataRow row = tab.NewRow();
-
-            int id = tab.Rows.Count + 1;
             string ln = tbLastName.Text;
             string fn = tbFirstName.Text;
-            string num = tbPhone.Text;
-            string res = tbaDDRESS.Text;
-            string per = tbPrescriptionComments.Text;
+            string phone = tbPhone.Text;
+            string res = tbAddress.Text;
+            string presc = tbPrescriptionComments.Text;
 
-            row[0] = id;
-            row[1] = ln;
-            row[2] = fn;
-            row[3] = num;
-            row[4] = res;
-            row[5] = per;
+            
 
-            tab.Rows.Add(row);
-            refillGrid();
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "INSERT INTO Main (lname, fname, phone, address, residence, prescription)" + " VALUES ('" + ln + "','" + fn + "','" + res + "','" + presc + "','" + phone + "')";
+            cmd.Parameters.AddWithValue("@fn", tbFirstName.Text);
+            cmd.Parameters.AddWithValue("@ln", tbLastName.Text);
+            cmd.Parameters.AddWithValue("@address", tbAddress.Text);
+            cmd.Parameters.AddWithValue("@presc", tbPrescriptionComments.Text);
+            cmd.Parameters.AddWithValue("@phone", tbPhone.Text);
+            cmd.Connection = conn;
+            conn.Open();
+            cmd.ExecuteNonQuery();
+
+           
+            
+            
+            
+            
 
 
+
+
+
+            //MessageBox.Show("Added Row");
         }
 
         private void Main_Form_FormClosing(object sender, FormClosingEventArgs e)
