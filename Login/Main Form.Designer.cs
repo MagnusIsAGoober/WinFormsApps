@@ -54,7 +54,7 @@
             groupBox1.Controls.Add(tbFirstName);
             groupBox1.Location = new Point(12, 12);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(499, 326);
+            groupBox1.Size = new Size(499, 248);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Adding A Patient";
@@ -173,7 +173,7 @@
             tbSearchLastName.HideSelection = true;
             tbSearchLastName.Hint = "Search with last name";
             tbSearchLastName.LeadingIcon = null;
-            tbSearchLastName.Location = new Point(18, 344);
+            tbSearchLastName.Location = new Point(12, 272);
             tbSearchLastName.MaxLength = 32767;
             tbSearchLastName.MouseState = MaterialSkin.MouseState.OUT;
             tbSearchLastName.Name = "tbSearchLastName";
@@ -195,7 +195,7 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(18, 398);
+            dataGridView1.Location = new Point(12, 326);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(683, 301);
@@ -210,7 +210,7 @@
             btnUpdate.Depth = 0;
             btnUpdate.HighEmphasis = true;
             btnUpdate.Icon = null;
-            btnUpdate.Location = new Point(522, 716);
+            btnUpdate.Location = new Point(706, 439);
             btnUpdate.Margin = new Padding(4, 6, 4, 6);
             btnUpdate.MouseState = MaterialSkin.MouseState.HOVER;
             btnUpdate.Name = "btnUpdate";
@@ -231,7 +231,7 @@
             materialButton2.Depth = 0;
             materialButton2.HighEmphasis = true;
             materialButton2.Icon = null;
-            materialButton2.Location = new Point(616, 716);
+            materialButton2.Location = new Point(706, 391);
             materialButton2.Margin = new Padding(4, 6, 4, 6);
             materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
             materialButton2.Name = "materialButton2";
@@ -242,12 +242,13 @@
             materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             materialButton2.UseAccentColor = false;
             materialButton2.UseVisualStyleBackColor = true;
+            materialButton2.Click += materialButton2_Click;
             // 
             // btnDelete
             // 
             btnDelete.Depth = 0;
             btnDelete.Icon = Properties.Resources.delete;
-            btnDelete.Location = new Point(722, 398);
+            btnDelete.Location = new Point(716, 326);
             btnDelete.MouseState = MaterialSkin.MouseState.HOVER;
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(56, 56);
@@ -260,7 +261,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 767);
+            ClientSize = new Size(800, 640);
             Controls.Add(btnDelete);
             Controls.Add(materialButton2);
             Controls.Add(btnUpdate);
